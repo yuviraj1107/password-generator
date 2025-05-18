@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="">
+        <title>Password Generator</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="heading"><h1>Password Generator</h1></div>
+
+            <div class="display-container">
+                <input  class="display" readonly placeholder="password"  data-passwordDisplay />
+                <button class="copyBtn" data-copy>           >
+                    <span data-copyMsg></span>
+                    <img src="copy.png"  alt="copy" width="23" height="23" />
+                </button>
+            </div>
+
+            <div class="input-container">
+
+                <div class="in-feild1">
+                    <h2>Password Length</h2>    
+                    <p data-lengthNum>0</p>
+                </div>
+                
+                <div class="in-field2">
+                    <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider >
+                </div>
+                
+                <div class="checkboxes">
+                <input type="checkbox" class="chk-box" id="uppercase" >
+                <label for="uppercase">Include uppercase letters</label> <br>
+                
+                <input type="checkbox" class="chk-box" id="lowercase" >
+                <label for="lowercase">Include lowercase letters</label> <br>
+                
+                <input type="checkbox" class="chk-box" id="numbers" >
+                <label for="numbers">Include numbers</label> <br>
+                
+                
+                <input type="checkbox" class="chk-box" id="symbols" >
+                <label for="symbols">Include symbols</label> <br>
+                </div>
+                
+                <div class="strength-cont">
+                    <h3>Strength</h3>
+                    <div class="circle" data-indicator></div>
+                </div>
+
+                <div class="generate-button">
+                    <button class="gnr-btn">Generate Password</button>
+                </div>
+
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
